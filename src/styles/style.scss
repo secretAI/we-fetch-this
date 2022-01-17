@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(160, 160, 160);
+}
+
+#app{
+  display: flex;
+  justify-content: center;
+  margin-inline: 50px;
+  flex-direction: column;
+  .title{
+    color: white;
+    font-size: 65px;
+    font-family: monospace;
+    font-variant: small-caps;
+    margin: 72px 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    transition-duration: 120ms;
+    transform: rotate(-15deg);
+    user-select: none;
+  }
+  h1:hover{
+    color: rgb(30, 30, 30);
+    transform: none;
+  }
+  .container{
+    display: flex;
+    position: absolute;
+    top: 25%;
+    flex-direction: column;
+    color: white;
+    font-size: 28px;
+    font-family: monospace;
+    list-style: none;
+    .wrapper{
+      user-select: none;
+      .str{
+        font-size: 50px;
+        font-family: monospace;
+        color: rgb(30, 30, 30);
+        user-select: text;
+      }
+      .str::selection{
+        color: rgb(230, 230, 230);
+        background-color: gray;
+      }
+    }
+  }
+}
+
