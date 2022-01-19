@@ -10,7 +10,8 @@ module.exports = {
   },
   devServer: {
     compress: true,
-    port: 3001
+    port: 3001,
+    hot: true
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -23,12 +24,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      },
-      // {
-      //   test: /\.js$/,
-      //   exclude: '/node_modules',
-      //   use: ['babel-loader']
-      // }
+      }
     ]
   }
 }

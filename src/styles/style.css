@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: #a0a0a0;
+  background-color: #fbfcfb;
+  overflow: hidden;
 }
 
 #app {
@@ -24,16 +25,17 @@ body {
 }
 
 #app .title {
-  color: white;
+  color: #b4b4b4;
   font-size: 65px;
   font-family: monospace;
-  font-variant: small-caps;
   margin: 72px 0;
   cursor: pointer;
   position: absolute;
   top: 0;
   -webkit-transition-duration: 120ms;
           transition-duration: 120ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   -webkit-user-select: none;
@@ -58,7 +60,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: white;
+  color: #828282;
   font-size: 28px;
   font-family: monospace;
   list-style: none;
@@ -69,25 +71,155 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #app .container .wrapper .str {
-  font-size: 50px;
+  font-size: 40px;
   font-family: monospace;
   color: #1e1e1e;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
+  padding-inline: 20px;
 }
 
 #app .container .wrapper .str::-moz-selection {
   color: #e6e6e6;
-  background-color: gray;
+  background-color: #464646;
 }
 
 #app .container .wrapper .str::selection {
   color: #e6e6e6;
-  background-color: gray;
+  background-color: #464646;
+}
+
+#app .container .wrapper .set-region {
+  position: absolute;
+  top: 0;
+}
+
+#app #setRegion {
+  display: block;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  position: absolute;
+  top: 202.5px;
+  left: 132.5px;
+}
+
+#app #mainLogo {
+  position: absolute;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  top: -120px;
+  left: 30%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.setrg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  opacity: 0;
+  width: 450px;
+  height: 80px;
+  border-top: none;
+  -webkit-box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 48.5%;
+  left: 12%;
+  text-align: center;
+  padding-inline: 10px;
+}
+
+.setrg .submit {
+  color: #1e1e1e;
+  font-size: 24px;
+  font-family: monospace;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding-inline: 10px;
+  background-color: #fbfcfb;
+  cursor: pointer;
+}
+
+.setrg input {
+  padding-inline: 20px;
+}
+
+.setrg #searchPole {
+  font-size: 20px;
+  font-family: monospace;
+  width: 60%;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.setrg #searchPole::-moz-selection {
+  color: #e6e6e6;
+  background-color: #464646;
+}
+
+.setrg #searchPole::selection {
+  color: #e6e6e6;
+  background-color: #464646;
+}
+
+.active {
+  opacity: 1;
+  -webkit-animation: sudden 100ms linear;
+          animation: sudden 100ms linear;
+}
+
+@-webkit-keyframes sudden {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes sudden {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
